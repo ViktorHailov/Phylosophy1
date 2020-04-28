@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+
+    <title>Учебник по философии</title>
+    <script src="Scripts/strelki/arrows.1.0.0.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <style>
+        body {
+            font: normal 20px georgia, serif;
+            color: #775e51;
+            background: #fbf8f7 url(images/bg_sand.gif) repeat;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin: 50px;
+            margin-top: 20px !important;
+            margin-bottom: 0px;
+            background-color: #f4efea;
+            border: 1px solid #775e51;
+            height: 1200px;
+        }
+
+
+        a {
+            color: #7d6355;
+            background: white;
+            display: inline-block;
+            border: 1px #937551 solid;
+            position: absolute;
+            margin: 10px;
+            z-index: 20;
+        }
+
+        .big {
+            width: 1000px;
+            font-size: 40px;
+            padding: 15px;
+        }
+
+        .medium {
+            width: 400px;
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .central {
+            text-align: center;
+            position: relative;
+            top: 10px;
+        }
+
+        ul {
+            z-index: 20;
+            border: 1px solid #775e51;
+            float: right;
+            padding: 10px;
+            margin-left: 10px;
+            position: absolute;
+            background-color: #fbf8f7;
+            text-align: left;
+            list-style-type: none;
+            width: 175px;
+            margin: 0 auto;
+            padding: 0px;
+            border: 0px;
+            width: 417px;
+            color: #7d6355;
+            background: white;
+            display: inline-block;
+            border: 1px #937551 solid;
+            position: absolute;
+            margin: 10px;
+        }
+
+
+            ul li {
+                margin-bottom: 3px;
+                padding: 2px 2px 2px 9px;
+                background: #f1e8e3;
+                border-left: 8px solid #e0d6d0;
+            }
+
+
+
+        li:hover {
+            border-left-color: #9B7B69;
+            background: #D0C0B8;
+        }
+
+        .header {
+            /*background: url(images/header_sand.gif) repeat-x center bottom;*/
+            height: 50px;
+            background-color: #f4efea;
+            text-align: center;
+            margin: 50px;
+            margin-top: 20px !important;
+            background-color: #f4efea;
+            border: 1px solid #775e51;
+            vertical-align: middle;
+            font-size: 35px;
+            margin-bottom: 0px;
+        }
+
+        .imgbord {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            /*width: 100%;*/
+            border: 4px solid #937551;
+            /*border-left: 4px solid #937551;
+            border-right: 4px solid #937551;*/
+        }
+    </style>
+
+
+
+</head>
+
+
+<body ng-app="app" ng-controller="MainCtrl" id="body">
+
+    <div class="header">
+        Глава 2
+    </div>
+
+
+    <div class="container">
+
+        <a class="big central in0">Древнеиндийская философия</a>
+
+        <a class="medium out0" style="top: 165px; left: 47px;">Зарождение древнеиндийской философии</a>
+        <a class="medium out0 in1" style="top: 258px; left: 46px;">Ведический период</a>
+        <a class="medium out0 in2" style="top: 172px; left: 870px;">Классический период</a>
+        <a class="medium out0 in3" style="top: 477px; left: 53px;">Индуистский период</a>
+        <a class="medium out1" style="top: 334px; left: 273px;">Четыре веды</a>
+        <a class="medium out1" style="top: 255px; left: 499px;">Атман и брахман</a>
+        <a class="medium out1" style="top: 391px; left: 47px;">Религия брахманизма</a>
+        <a class="medium out2" style="top: 460px; left: 1354px;">Классические системы Древней Индии</a>
+        <a class="medium out2" style="top: 397px; left: 938px;">Ньяя</a>
+        <a class="medium out2 in20" style="top: 306px; left: 1371px;">Йога</a>
+        <a class="medium out20" style="top: 388px; left: 1370px;">Йогический бог</a>
+        <a class="medium out2" style="top: 171px; left: 1368px;">Вайшешика</a>
+        <a class="medium out2" style="top: 237px; left: 1364px;">Веданта</a>
+        <a class="medium out2 in21" style="top: 564px; left: 868px;">Санкхья</a>
+        <a class="medium out21 in22" style="top: 564px; left: 1376px;">Пуруша</a>
+        <a class="medium out22" style="top: 700px; left: 1384px;">Будхи</a>
+        <a class="medium out21" style="top: 784px; left: 943px;">Пракрити</a>
+        <a class="medium out2" style="top: 314px; left: 938px;">Миманса</a>
+
+        <a class="medium out3 in30" style="top: 548px; left: 46px;">Неклассические философские системы Древней Индии</a>
+        <a class="medium out30 in31" style="top: 638px; left: 605px;">Буддизм</a>
+        <a class="medium out31" style="top: 1017px; left: 1286px;">Основания буддизма</a>
+        <a class="medium out31" style="top: 782px; left: 1379px;">Дхарма</a>
+        <a class="medium out31" style="top: 911px; left: 1376px;">Четыре благородных истины</a>
+        <a class="medium out31" style="top: 723px; left: 50px;">Восьмеричный путь</a>
+        <a class="medium out31" style="top: 391px; left: 479px;">Карма как нравственный закон</a>
+        <a class="medium out31" style="top: 632px; left: 1086px;">Нирвана</a>
+        <a class="medium out31" style="top: 791px; left: 60px;">Космология буддизма</a>
+        <a class="medium out31" style="top: 1131px; left: 1071px;">Буддизм - религия без бога</a>
+        <a class="medium out31" style="top: 906px; left: 501px;">Три главных направления в буддизме</a>
+        <a class="medium out31" style="top: 1133px; left: 604px;">Распространение буддизма</a>
+        <a class="medium out31" style="top: 768px; left: 498px;">Теософское общество и деятельность Блаватской Е.П.</a>
+        <a class="medium out3" style="top: 463px; left: 769px;">Индуизм</a>
+        <a class="medium out0" style="top: 1086px; left: 69px;">Вопросы для самостоятельной работы</a>
+        <a class="medium out0" style="top: 1194px; left: 66px;">Литература</a>
+
+
+
+
+
+    </div>
+    <form id="form1" runat="server"></form>
+
+
+
+    <script>
+        $(init)
+
+        function init() {
+
+            $("a, ul").draggable({
+                containment: "body",
+                scroll: false,
+                drag: function (event, ui) {
+                    arrowsDrawer.redraw();
+                }
+            });
+
+            // options for drawing arrows
+            // all options: michael.verhov.com/en/post/canvas_arrows_for_div or via sources (recommended)
+            var options = {
+                base: { canvasZIndex: 10 },
+                render: { strokeStyle: '#777', lineWidth: 2 }, arrow: { connectionType: 'rectangleAuto' }
+            };
+            //var options2 = { render: { strokeStyle: '#777', lineWidth: 2 }, arrow: { connectionType: 'rectangleAngle', angleFrom: 180, angleTo: 360 } };
+            //var options3 = { render: { strokeStyle: '#777', lineWidth: 2 }, arrow: { connectionType: 'rectangleAngle', angleFrom: 0, angleTo: 180 } };
+
+
+            // initialize arrows library; hidden canvas created after "common-parent" to drawing arrows.
+            var arrowsDrawer = $cArrows('body', options);
+            //var arrowsDrawer2 = $cArrows('#body', options2);
+            //var arrowsDrawer3 = $cArrows('#body', options3);
+
+            // draw arrows "from" "to" blocks; drawing happens once(!), to update arrows use .redraw() function.
+            arrowsDrawer.arrow('.in0', '.out0');
+            arrowsDrawer.arrow('.in1', '.out1');
+            arrowsDrawer.arrow('.in2', '.out2');
+            arrowsDrawer.arrow('.in20', '.out20');
+            arrowsDrawer.arrow('.in21', '.out21');
+            arrowsDrawer.arrow('.in22', '.out22');
+            arrowsDrawer.arrow('.in3', '.out3');
+            arrowsDrawer.arrow('.in30', '.out30');
+            arrowsDrawer.arrow('.in31', '.out31');
+
+            arrowsDrawer.arrow('.in4', '.out4');
+            //arrowsDrawer.arrow('.central-icon', '.icon2')
+            //arrowsDrawer.arrow('.ch2', '.icon3');
+            // arrowsDrawer.arrow('.out0', '.icon1');
+
+
+            // feel free to add one more connection between elements; connections will be saved inside library.
+            //arrowsDrawer.arrow('.icon-5', '.icon-6');
+        }
+
+    </script>
+</body>
+</html>
+

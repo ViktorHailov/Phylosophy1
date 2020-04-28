@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+
+    <title>Учебник по философии</title>
+    <script src="Scripts/strelki/arrows.1.0.0.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <style>
+        body {
+            font: normal 20px georgia, serif;
+            color: #775e51;
+            background: #fbf8f7 url(images/bg_sand.gif) repeat;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin: 50px;
+            margin-top: 20px !important;
+            margin-bottom: 0px;
+            background-color: #f4efea;
+            border: 1px solid #775e51;
+            height: 450px;
+        }
+
+
+        a {
+            color: #7d6355;
+            background: white;
+            display: inline-block;
+            border: 1px #937551 solid;
+            position: absolute;
+            margin: 10px;
+            z-index: 20;
+        }
+
+        .big {
+            width: 1000px;
+            font-size: 40px;
+            padding: 15px;
+        }
+
+        .medium {
+            width: 400px;
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .central {
+            text-align: center;
+            position: relative;
+            top: 10px;
+        }
+
+        ul {
+            z-index: 20;
+            border: 1px solid #775e51;
+            float: right;
+            padding: 10px;
+            margin-left: 10px;
+            position: absolute;
+            background-color: #fbf8f7;
+            text-align: left;
+            list-style-type: none;
+            width: 175px;
+            margin: 0 auto;
+            padding: 0px;
+            border: 0px;
+            width: 417px;
+            color: #7d6355;
+            background: white;
+            display: inline-block;
+            border: 1px #937551 solid;
+            position: absolute;
+            margin: 10px;
+        }
+
+
+            ul li {
+                margin-bottom: 3px;
+                padding: 2px 2px 2px 9px;
+                background: #f1e8e3;
+                border-left: 8px solid #e0d6d0;
+            }
+
+
+
+        li:hover {
+            border-left-color: #9B7B69;
+            background: #D0C0B8;
+        }
+
+        .header {
+            /*background: url(images/header_sand.gif) repeat-x center bottom;*/
+            height: 50px;
+            background-color: #f4efea;
+            text-align: center;
+            margin: 50px;
+            margin-top: 20px !important;
+            background-color: #f4efea;
+            border: 1px solid #775e51;
+            vertical-align: middle;
+            font-size: 35px;
+            margin-bottom: 0px;
+        }
+
+        .imgbord {
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            /*width: 100%;*/
+            border: 4px solid #937551;
+            /*border-left: 4px solid #937551;
+            border-right: 4px solid #937551;*/
+        }
+    </style>
+
+
+
+</head>
+
+
+<body ng-app="app" ng-controller="MainCtrl" id="body">
+
+    <div class="header">
+        Глава 4
+    </div>
+
+
+    <div class="container">
+
+        <a class="big central in0">Античная философия</a>
+
+
+        <a class="medium out0" style="top: 257px; left: 334px;">Философия как мировоззрение</a>
+        <a class="medium out0" style="top: 241px; left: 819px;">Социальные условия формирования Древнегреческой философии</a>
+        <a class="medium out0 in01" style="top: 174px; left: 49px;">Предфилософия Древней Греции</a>
+        <a class="medium out0" style="top: 233px; left: 1389px;">Периодизация античной философии</a>
+
+        <a class="medium out01" style="top: 327px; left: 48px;">Мифология и теогония</a>
+        <a class="medium out0" style="top: 414px; left: 325px;">Досократическая натурфилософия</a>
+        <a class="medium out0" style="top: 418px; left: 1374px;">Эллинистически-римская философия</a>
+        <a class="medium out0" style="top: 418px; left: 810px;">Философия классического периода</a>
+
+
+
+    </div>
+    <form id="form1" runat="server"></form>
+
+
+
+    <script>
+        $(init)
+
+        function init() {
+
+            $("a, ul").draggable({
+                containment: "body",
+                scroll: false,
+                drag: function (event, ui) {
+                    arrowsDrawer.redraw();
+                }
+            });
+
+
+            var options = {
+                base: { canvasZIndex: 10 },
+                render: { strokeStyle: '#777', lineWidth: 2 }, arrow: { connectionType: 'rectangleAuto' }
+            };
+
+            var arrowsDrawer = $cArrows('body', options);
+
+            arrowsDrawer.arrow('.in0', '.out0');
+            arrowsDrawer.arrow('.in01', '.out01');
+            //arrowsDrawer.arrow('.in1', '.out1');
+            //arrowsDrawer.arrow('.in10', '.out10');
+            //arrowsDrawer.arrow('.in11', '.out11');
+
+            //arrowsDrawer.arrow('.in1', '.out1');
+            //arrowsDrawer.arrow('.in2', '.out2');
+            //arrowsDrawer.arrow('.in20', '.out20');
+            //arrowsDrawer.arrow('.in21', '.out21');
+            //arrowsDrawer.arrow('.in22', '.out22');
+            //arrowsDrawer.arrow('.in3', '.out3');
+            //arrowsDrawer.arrow('.in30', '.out30');
+            //arrowsDrawer.arrow('.in31', '.out31');
+
+            //arrowsDrawer.arrow('.in4', '.out4');
+
+        }
+
+    </script>
+</body>
+</html>
+
